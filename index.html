@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thala 7 Store - Fully Functional Layout</title>
+    <!-- FontAwesome Icons for Beautiful Design -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Linking Style.css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ========================================================== -->
+    <!-- SECTION 1: HOME PAGE (As seen in 1.jpg) -->
+    <!-- ========================================================== -->
+    <div id="section-home" class="full-page-wrapper">
+        <!-- NAVBAR -->
+        <header class="navbar">
+            <div class="logo">
+                <h2>Thala <span class="blue-text">7.</span></h2>
+            </div>
+            <nav class="nav-links">
+                <a href="#" class="active" onclick="scrollToSection('section-home')">Home</a>
+                <a href="#" onclick="scrollToSection('section-product')">About</a>
+                <a href="#">Brands <i class="fa-solid fa-chevron-down"></i></a>
+                <a href="#">More <i class="fa-solid fa-chevron-down"></i></a>
+                <a href="#">Contact</a>
+            </nav>
+            <div class="nav-right">
+                <div class="search-container">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search">
+                </div>
+                <div class="cart-box" onclick="scrollToSection('section-cart')">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-count">3</span>
+                </div>
+                <div class="profile-avatar">
+                    <img src="3.jpg" alt="Profile">
+                </div>
+            </div>
+        </header>
+
+        <!-- HERO CONTENT -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <span class="brand-sub">SE7EN™ <br><small>BY MS DHONI</small></span>
+                <h1>7!! Thala For <br>a <span class="highlight-text">Reason!</span></h1>
+                <p>Lorem ipsum dolor sit amet consectetur. Pretium quisque lorem feugiat justo at ut orci nisl.</p>
+                <!-- Click functionality to go to Product section -->
+                <button class="shop-now-btn" onclick="scrollToSection('section-product')">Shop Now</button>
+            </div>
+            <div class="hero-image">
+                <img src="1.jpg" alt="Premium Shoe">
+            </div>
+        </section>
+
+        <!-- ORANGE INFO BAR -->
+        <div class="orange-info-bar">
+            <div class="info-item"><i class="fa-regular fa-comments"></i> <span><strong>2k+</strong> Reviews</span></div>
+            <div class="info-item"><i class="fa-solid fa-users"></i> <span><strong>30k+</strong> Customers</span></div>
+            <div class="info-item"><i class="fa-regular fa-star"></i> <span><strong>High</strong> Quality</span></div>
+            <div class="info-item"><i class="fa-solid fa-calculator"></i> <span><strong>4.5/5</strong> Rating</span></div>
+        </div>
+    </div>
+
+
+    <!-- ========================================================== -->
+    <!-- SECTION 2: PRODUCT DETAILS (As seen in 2.jpg) -->
+    <!-- ========================================================== -->
+    <div id="section-product" class="full-page-wrapper" style="border-top: 2px dashed #ccc; padding-top: 40px;">
+        <!-- NAVBAR -->
+        <header class="navbar">
+            <div class="logo">
+                <h2>Thala <span class="blue-text">7.</span></h2>
+            </div>
+            <nav class="nav-links">
+                <a href="#" onclick="scrollToSection('section-home')">Home</a>
+                <a href="#" class="active" onclick="scrollToSection('section-product')">About</a>
+                <a href="#">Brands <i class="fa-solid fa-chevron-down"></i></a>
+                <a href="#">More <i class="fa-solid fa-chevron-down"></i></a>
+                <a href="#">Contact</a>
+            </nav>
+            <div class="nav-right">
+                <div class="search-container">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search">
+                </div>
+                <div class="cart-box" onclick="scrollToSection('section-cart')">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-count">0</span>
+                </div>
+                <div class="profile-avatar">
+                    <img src="3.jpg" alt="Profile">
+                </div>
+            </div>
+        </header>
+
+        <div class="breadcrumb-container">
+            <p>Home > THALA FOR A REASON > Seven By M.S.Dhoni Women's Hogun Multi-Color Running Shoes</p>
+        </div>
+
+        <!-- PRODUCT LAYOUT -->
+        <div class="product-container">
+            <div class="product-image-side">
+                <!-- Added Dynamic ID for changing images -->
+                <img id="main-product-img" src="2.jpg" alt="Main Product">
+            </div>
+            <div class="product-info-side">
+                <h1 class="product-title">Seven By M.S.Dhoni Women's Hogun Multi-Color Running Shoes</h1>
+                <p class="product-desc">For exceptional fit, feel and smooth transitions get going with these dual mid sole technology shoes constructed with molded EVS sock liner, gel at heel area, rubber outsole, fused upper and breathable...</p>
+                
+                <div class="price-box-layout">
+                    <span class="live-price-tag">₹1,334</span>
+                    <span class="discount-badge-green">Save 12% <br><small>Inclusive of all Taxes</small></span>
+                </div>
+
+                <div class="action-row-layout">
+                    <select class="qty-dropdown">
+                        <option>1</option>
+                        <option selected>2</option>
+                        <option>3</option>
+                    </select>
+                    <!-- Click functionality to go to Cart section -->
+                    <button class="add-to-cart-btn-orange" onclick="scrollToSection('section-cart')"><i class="fa-solid fa-lock"></i> ADD TO CART</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- THUMBNAILS GALLERY (Clickable to switch main photo) -->
+        <div class="thumbnails-wrapper">
+            <div class="thumb-box active" onclick="changeImage(this, '2.jpg')"><img src="2.jpg" alt="t1"></div>
+            <div class="thumb-box" onclick="changeImage(this, 'p2.jfif')"><img src="p2.jfif" alt="t2"></div>
+            <div class="thumb-box" onclick="changeImage(this, 'p3.jfif')"><img src="p3.jfif" alt="t3"></div>
+            <div class="thumb-box" onclick="changeImage(this, 'p4.jfif')"><img src="p4.jfif" alt="t4"></div>
+            <div class="thumb-box" onclick="changeImage(this, 'p5.jfif')"><img src="p5.jfif" alt="t5"></div>
+        </div>
+    </div>
+
+
+    <!-- ========================================================== -->
+    <!-- SECTION 3: SHOPPING CART (As seen in 3.png) -->
+    <!-- ========================================================== -->
+    <div id="section-cart" class="full-page-wrapper" style="border-top: 2px dashed #ccc; padding-top: 40px;">
+        <!-- NAVBAR -->
+        <header class="navbar">
+            <div class="logo">
+                <h2>Thala <span class="blue-text">7.</span></h2>
+            </div>
+            <nav class="nav-links">
+                <a href="#" onclick="scrollToSection('section-home')">Home</a>
+                <a href="#" onclick="scrollToSection('section-product')">About</a>
+                <a href="#">Brands <i class="fa-solid fa-chevron-down"></i></a>
+                <a href="#">More <i class="fa-solid fa-chevron-down"></i></a>
+                <a href="#">Contact</a>
+            </nav>
+            <div class="nav-right">
+                <div class="search-container">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search">
+                </div>
+                <div class="cart-box" onclick="scrollToSection('section-cart')">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-count">3</span>
+                </div>
+                <div class="profile-avatar">
+                    <img src="3.jpg" alt="Profile">
+                </div>
+            </div>
+        </header>
+
+        <div class="cart-container-new">
+            <h1 class="main-cart-title">Shopping Cart</h1>
+            
+            <div class="cart-split-layout">
+                <!-- Items list side -->
+                <div class="cart-items-side">
+                    <div class="cart-list-row">
+                        <span class="item-name-text">Seven By M.S.Dhoni W...</span>
+                        <div class="qty-counter-box">
+                            <button onclick="changeQty(this, -1)">-</button><input type="text" value="1" readonly><button onclick="changeQty(this, 1)">+</button>
+                        </div>
+                        <span class="item-price-text">₹4,999 <i class="fa-solid fa-xmark delete-icon" onclick="deleteRow(this)"></i></span>
+                    </div>
+                    <div class="cart-list-row">
+                        <span class="item-name-text">Seven By M.S.Dhoni W...</span>
+                        <div class="qty-counter-box">
+                            <button onclick="changeQty(this, -1)">-</button><input type="text" value="1" readonly><span>end</span>
+                        </div>
+                        <span class="item-price-text">₹4,999 <i class="fa-solid fa-xmark delete-icon" onclick="deleteRow(this)"></i></span>
+                    </div>
+                    <div class="cart-list-row">
+                        <span class="item-name-text">Seven By M.S.Dhoni W...</span>
+                        <div class="qty-counter-box">
+                            <button onclick="changeQty(this, -1)">-</button><input type="text" value="1" readonly><button onclick="changeQty(this, 1)">+</button>
+                        </div>
+                        <span class="item-price-text">₹4,999 <i class="fa-solid fa-xmark delete-icon" onclick="deleteRow(this)"></i></span>
+                    </div>
+
+                    <a href="#" class="continue-shopping-link" onclick="scrollToSection('section-product')"><i class="fa-solid fa-chevron-left"></i> Continue Shopping</a>
+                </div>
+
+                <!-- Calculation/Summary side -->
+                <div class="cart-summary-side">
+                    <div class="summary-white-card">
+                        <label>Enter Coupon Code</label>
+                        <div class="coupon-field-row">
+                            <input type="text" placeholder="COUPON CODE">
+                            <button class="apply-btn-blue" onclick="alert('Coupon Applied Successfully!')">Apply Coupon</button>
+                        </div>
+
+                        <div class="summary-line"><span>Sub Total</span><span>₹4,700</span></div>
+                        <div class="summary-line"><span>Taxes(if applicable)</span><span>₹199</span></div>
+                        <div class="summary-line"><span>Discount</span><span>₹0</span></div>
+                        <hr>
+                        <div class="summary-total-line"><span>Total</span><span>₹4,999</span></div>
+                    </div>
+
+                    <!-- Click to jump directly to Checkout form -->
+                    <button class="pay-now-orange-btn" onclick="scrollToSection('section-checkout')">Pay Now ₹4,999</button>
+
+                    <div class="trust-strip">
+                        <span><i class="fa-solid fa-shield-halved"></i> SECURE</span>
+                        <strong>Razorpay</strong>
+                        <span><i class="fa-solid fa-lock"></i> SECURE PAYMENT</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ========================================================== -->
+    <!-- SECTION 4: CHECKOUT FORM (As seen in 4.png) -->
+    <!-- ========================================================== -->
+    <div id="section-checkout" class="full-page-wrapper" style="border-top: 2px dashed #ccc; background: #f8fafc; padding-top: 40px;">
+        <div class="exact-checkout-body">
+            <div class="exact-main-wrapper">
+                
+                <!-- Left panel inputs -->
+                <div class="exact-left-panel">
+                    <div class="exact-left-content">
+                        <span class="exact-breadcrumb" style="cursor: pointer;" onclick="scrollToSection('section-home')">Checkout (Back to Home)</span>
+                        
+                        <div class="exact-section">
+                            <h2 class="exact-section-title">Contact Details</h2>
+                            <div class="exact-field-group">
+                                <label class="exact-label">Email ID</label>
+                                <input type="text" placeholder="John Doe" class="exact-input">
+                            </div>
+                        </div>
+
+                        <div class="exact-section">
+                            <h2 class="exact-section-title">Payment</h2>
+                            <div class="exact-tabs-row">
+                                <div class="exact-tab active" onclick="selectTab(this)"><i class="fa-regular fa-credit-card"></i> <span>Card</span></div>
+                                <div class="exact-tab" onclick="selectTab(this)"><i class="fa-brands fa-bitcoin"></i> <span>Crypto</span></div>
+                                <div class="exact-tab" onclick="selectTab(this)"><i class="fa-solid fa-building-columns"></i> <span>Bank</span></div>
+                                <div class="exact-more-btn"><i class="fa-solid fa-ellipsis-vertical"></i></div>
+                            </div>
+                        </div>
+
+                        <div class="exact-grid-container">
+                            <div class="exact-grid-full">
+                                <label class="exact-label">Card Number</label>
+                                <input type="text" placeholder="John Doe" class="exact-input">
+                            </div>
+                            <div class="exact-grid-half">
+                                <label class="exact-label">Expiry</label>
+                                <input type="text" placeholder="MM/YY" class="exact-input">
+                            </div>
+                            <div class="exact-grid-half">
+                                <label class="exact-label">CVC</label>
+                                <input type="text" placeholder="..." class="exact-input">
+                            </div>
+                            <div class="exact-grid-half">
+                                <label class="exact-label">Country</label>
+                                <select class="exact-select">
+                                    <option>India</option>
+                                    <option>United States</option>
+                                </select>
+                            </div>
+                            <div class="exact-grid-half">
+                                <label class="exact-label">ZIP</label>
+                                <input type="text" placeholder="XXXXX" class="exact-input">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Right panel calculation box -->
+                <div class="exact-right-panel">
+                    <div class="exact-right-content">
+                        <h1 class="exact-summary-title">Order Summary</h1>
+                        <div class="exact-summary-box">
+                            <label class="exact-coupon-label">Enter Coupon Code</label>
+                            <div class="exact-coupon-row">
+                                <input type="text" placeholder="COUPON CODE" class="exact-coupon-input">
+                                <button class="exact-coupon-btn" onclick="alert('Coupon Code Applied!')">Apply Coupon</button>
+                            </div>
+                            <div class="exact-row"><span>Sub Total</span><strong>₹4,700</strong></div>
+                            <div class="exact-row"><span>Taxes(if applicable)</span><strong>₹199</strong></div>
+                            <div class="exact-row"><span>Discount</span><strong>₹0</strong></div>
+                            <div class="exact-total-row"><span>Total</span><span>₹4,999</span></div>
+                        </div>
+                        <button class="exact-pay-btn" onclick="alert('Thank you! Your Payment of ₹4,999 was Successful.')">Pay Now ₹4,999</button>
+                        <div class="exact-trust-footer">
+                            <span class="exact-badge exact-badge-green">SECURE</span>
+                            <span class="exact-razorpay">Razorpay</span>
+                            <span class="exact-badge exact-badge-outline">SECURE PAYMENT</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================================== -->
+    <!-- JAVASCRIPT LOGIC (Makes all pages functional) -->
+    <!-- ========================================================== -->
+    <script>
+        // 1. Smoothly scroll down to targeted block
+        function scrollToSection(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // 2. Swaps primary image inside Product block
+        function changeImage(element, imageUrl) {
+            document.getElementById('main-product-img').src = imageUrl;
+            const thumbs = document.querySelectorAll('.thumb-box');
+            thumbs.forEach(t => t.classList.remove('active'));
+            element.classList.add('active');
+        }
+
+        // 3. Plus/Minus product counting
+        function changeQty(btn, num) {
+            const input = btn.parentElement.querySelector('input');
+            let val = parseInt(input.value) + num;
+            if(val < 1) val = 1;
+            input.value = val;
+        }
+
+        // 4. Temporarily remove product row from display
+        function deleteRow(icon) {
+            const row = icon.closest('.cart-list-row');
+            if(confirm("Do you really want to clear this item from your cart?")) {
+                row.style.display = 'none';
+            }
+        }
+
+        // 5. Switching tabs inside payment methods
+        function selectTab(tab) {
+            const tabs = document.querySelectorAll('.exact-tab');
+            tabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
